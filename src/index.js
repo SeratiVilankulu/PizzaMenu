@@ -1,41 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./index.css";
+
+import Header from "./components/header";
+import Menu from "./components/menu";
+import Footer from "./components/footer";
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <Header />
       <Menu />
       <Footer />
     </div>
-  );
-}
-function Header() {
-  return <h1>Fast React Pizza Co.</h1>;
-}
-
-function Menu() {
-  return (
-    <div>
-      <h2>Our Menu</h2>
-      <Pizza />
-    </div>
-  );
-}
-
-function Pizza() {
-  return (
-    <div>
-      <img src="pizzas/salamino.jpg" alt="Pizza Salamino" />
-      <h2>Pizza Salamino</h2>
-      <p>Tomato, mozarella, and pepperoni</p>
-    </div>
-  );
-}
-
-function Footer() {
-  return (
-    <footer>{new Date().toLocaleTimeString()} We're currently open!</footer>
   );
 }
 
