@@ -9,7 +9,7 @@ function Menu() {
       <div className="pizzas">
         <div>
           {pizzaData.map((pizza) => (
-            <Pizza pizzaObj={pizza} />
+            <Pizza pizzaObj={pizza} key={pizza.id} />
           ))}
         </div>
       </div>
