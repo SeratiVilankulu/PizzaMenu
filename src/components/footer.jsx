@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   const hour = new Date().getHours();
-  const openHour = 11;
+  const openHour = 15;
   const closeHour = 22;
   const isOpen = hour >= openHour && hour <= closeHour;
 
@@ -13,7 +13,20 @@ function Footer() {
   // }
 
   return (
-    <footer>{new Date().toLocaleTimeString()} We're currently open!</footer>
+    <footer className="footer">
+      {isOpen ? (
+        <div className="order">
+          <p>
+            We're open untill {closeHour}:00. Come visit us or order online!
+          </p>
+          <button className="btn">Order</button>
+        </div>
+      ) : (
+        <p>
+          We'er happy to wellcom you between {openHour}:00 and {closeHour}:00
+        </p>
+      )}
+    </footer>
   );
 }
 
